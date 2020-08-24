@@ -1,6 +1,6 @@
 import React from 'react';
 import IndividualCircle from './IndividualCircle'
-import ScoreBoard from './ScoreBoard'
+import ScoreBoard from './Score'
 
 
 const CircleButtons = () => {

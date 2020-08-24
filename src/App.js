@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import CircleButtons from './components/CircleButtons'
+import CircleButtons from './components/SimonBoard'
 
 export default function App() {
   return (
