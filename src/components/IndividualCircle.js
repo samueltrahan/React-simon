@@ -3,7 +3,7 @@ import './IndividualCircle.css';
 
 const IndividualCircle = () => {
   return (
-    <div>
+    <div className="simon-btn-board">
       <button className="red-circle">Red</button>
       <button className="blue-circle">Blue</button>
       <button className="green-circle">Green</button>
