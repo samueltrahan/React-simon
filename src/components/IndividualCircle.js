@@ -1,6 +1,7 @@
 import React from "react";
 import './IndividualCircle.css';
 
+
 const IndividualCircle = () => {
   return (
     <div className="simon-btn-board">

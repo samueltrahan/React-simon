@@ -1,0 +1,16 @@
+.score-board {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  box-sizing: border-box;
+  border: 5px solid black;
+  border-radius: 50%;
+  text-align: center;
+  width: 150px;
+  height: 100px;
+  justify-self: center;
+  color: white;
+  background-color: transparent;
+  font-size: 23px;
+  -webkit-text-stroke: 1px #282828;
+  text-shadow: 0px 4px 4px #282828;
+}
