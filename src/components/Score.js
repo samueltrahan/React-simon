@@ -1,5 +1,5 @@
-import React from 'react';
-import './Score.css'
+import React from "react";
+import "./Score.css";
 
 const ScoreBoard = () => {
   return (
@@ -7,7 +7,7 @@ const ScoreBoard = () => {
       <section>Score</section>
       <section className="scoreBoard-counter">0</section>
     </div>
-  )
-}
+  );
+};
 
-export default ScoreBoard
+export default ScoreBoard;

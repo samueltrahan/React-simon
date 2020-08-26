@@ -4,6 +4,8 @@ import ScoreBoard from './Score'
 
 
 const CircleButtons = () => {
+
+
   return (
     <div>
       <IndividualCircle />
