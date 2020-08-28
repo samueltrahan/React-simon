@@ -1,19 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import IndividualCircle from "./components/IndividualCircle";
 import Score from "./components/Score";
 
 export default function App() {
-    // solutionSequence: [],
-    // solutionSequenceIndex: 0,
-    // roundBlinkCount: 0,
-    // roundInterval: 0,
-    // blinkDuration: 0,
-    // blinkGapDuration: 0,
-    // currentRound: 1,
-    // currentScore: 0,
-    // isWinner: false,
-
+    const [solutionSequence, setSolutionSequence] = useState([]);
+    const [solutionSequenceIndex, setSolutionSequenceIndex] = useState(0);
+    const [roundBlinkCount, setRoundBlinkCount] = useState(0);
+    const [roundInterval, setRoundInterval] = useState(0);
+    const [blinkDuration, setBlinkDuration] = useState(0); 
+    const [blinkGapDuration, setBlinkGapDuration] = useState(0); 
+    const [currentRound, setCurrentRound] = useState(1);
+    const [currentScore, setCurrentScore] = useState(0);
+    const [isWinner, setIsWinner] = useState(false);
 
     return (
       <div>
