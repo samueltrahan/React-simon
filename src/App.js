@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import SimonBoard from "./components/SimonBoard";
+import IndividualCircle from "./components/IndividualCircle";
+import Score from "./components/Score";
 
 class App extends React.Component {
   state = {
@@ -15,18 +16,20 @@ class App extends React.Component {
     isWinner: false,
   };
 
-  generateSolutionSequence() {
-    for (let i = 0; i < 20; i++) {
-      this.state.solutionSequence.push(Math.floor(Math.random() * 4) + 1);
-    }
-    console.log(this.state.solutionSequence)
-  }
-
   render() {
     return (
       <div>
         <h1 className="simon-heading">Simon</h1>
-        <SimonBoard />
+
+        <IndividualCircle color={"red"} />
+
+        <IndividualCircle color={"blue"} />
+
+        <IndividualCircle color={"yellow"} />
+
+        <IndividualCircle color={"green"} />
+
+        <Score />
       </div>
     );
   }

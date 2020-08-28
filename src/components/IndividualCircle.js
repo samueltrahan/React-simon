@@ -1,16 +1,12 @@
 import React from "react";
-import './IndividualCircle.css';
+import "./IndividualCircle.css";
 
-
-const IndividualCircle = () => {
+const IndividualCircle = ({ color }) => {
   return (
     <div className="simon-btn-board">
-      <button className="red-circle">Red</button>
-      <button className="blue-circle">Blue</button>
-      <button className="green-circle">Green</button>
-      <button className="yellow-circle">Yellow</button>
+      <button className={`${color}-circle`}>{color}</button>
     </div>
-  )
+  );
 };
 
 export default IndividualCircle;
