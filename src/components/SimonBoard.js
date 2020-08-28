@@ -1,9 +1,9 @@
-import React from 'react';
-import IndividualCircle from './IndividualCircle'
-import ScoreBoard from './Score'
-
+import React from "react";
+import IndividualCircle from "./IndividualCircle";
+import ScoreBoard from "./Score";
 
 const CircleButtons = () => {
+
 
 
   return (
@@ -11,7 +11,7 @@ const CircleButtons = () => {
       <IndividualCircle />
       <ScoreBoard />
     </div>
-  )
-}
+  );
+};
 
-export default CircleButtons
+export default CircleButtons;
