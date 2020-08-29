@@ -3,9 +3,9 @@ import "./IndividualCircle.css";
 
 const IndividualCircle = ({ color }) => {
   return (
-    <div className="simon-btn-board">
+    <>
       <button className={`${color}-circle`}>{color}</button>
-    </div>
+    </>
   );
 };
 

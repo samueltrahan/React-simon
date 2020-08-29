@@ -17,14 +17,15 @@ export default function App() {
     return (
       <div>
         <h1 className="simon-heading">Simon</h1>
-
+        <div className="simon-btn-board">
         <IndividualCircle color={"red"} />
 
         <IndividualCircle color={"blue"} />
 
-        <IndividualCircle color={"yellow"} />
-
         <IndividualCircle color={"green"} />
+
+        <IndividualCircle color={"yellow"} />
+        </div>
 
         <Score />
       </div>
