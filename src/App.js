@@ -14,6 +14,13 @@ export default function App() {
     const [currentScore, setCurrentScore] = useState(0);
     const [isWinner, setIsWinner] = useState(false);
 
+
+    function generateSolutionSequence() {
+      for(let i = 0; i < 20; i++) {
+        setSolutionSequence(Math.floor(Math.random() * 4) + 1)
+      }
+    }
+
     return (
       <div>
         <h1 className="simon-heading">Simon</h1>
