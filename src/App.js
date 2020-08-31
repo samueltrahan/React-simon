@@ -42,7 +42,7 @@ export default function App() {
     <div>
       <h1 className="simon-heading">Simon</h1>
       <div className="simon-btn-board">
-        <IndividualCircle color={"red"} />
+        <IndividualCircle color={"red"} blinkDuration={blinkDuration} solutionSequence={solutionSequence} roundBlinkCount={roundBlinkCount}/>
 
         <IndividualCircle color={"blue"} />
 
