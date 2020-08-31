@@ -6,8 +6,8 @@ import Score from "./components/Score";
 export default function App() {
   const [solutionSequence, setSolutionSequence] = useState([]);
   const [solutionSequenceIndex, setSolutionSequenceIndex] = useState(0);
-  const [roundBlinkCount, setRoundBlinkCount] = useState(0);
-  const [roundInterval, setRoundInterval] = useState(0);
+  let [roundBlinkCount, setRoundBlinkCount] = useState(0);
+  let [roundInterval, setRoundInterval] = useState(0);
   const [blinkDuration, setBlinkDuration] = useState(1000);
   const [blinkGapDuration, setBlinkGapDuration] = useState(1500);
   const [currentRound, setCurrentRound] = useState(1);
@@ -15,7 +15,7 @@ export default function App() {
   const [isWinner, setIsWinner] = useState(false);
 
   function generateSolutionSequence() {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 1; i++) {
     solutionSequence.push(Math.floor(Math.random() * 4) + 1)
     }
   }
@@ -24,6 +24,12 @@ export default function App() {
     if (currentRound === 1) {
       generateSolutionSequence();
     }
+    roundInterval = setInterval(playGameBlink, blinkGapDuration)
+  }
+
+  function playGameBlink() {
+    handleBlink();
+    setRoundBlinkCount++
   }
 
   function resetGame() {
@@ -36,17 +42,33 @@ export default function App() {
     clearInterval(roundInterval);
   }
 
+  
+  function handleButtonBlink(buttonNum) {
+    if(buttonNum === 1 && 'red') {
+     simonButtons.style.backgroundColor = 'rgb(230, 97, 97)';
+      setTimeout(function() {
+        simonButtons.style.backgroundColor = 'rgb(163, 10, 10)'
+      }, blinkDuration)
+    }
+  }
+
+  function handleBlink() {
+    if(solutionSequence[roundBlinkCount] === 1) {
+      handleButtonBlink(1)
+    }
+  }
+
   return (
     <div>
       <h1 className="simon-heading">Simon</h1>
       <div className="simon-btn-board">
         <IndividualCircle color={"red"} blinkDuration={blinkDuration} solutionSequence={solutionSequence} roundBlinkCount={roundBlinkCount}/>
 
-        <IndividualCircle color={"blue"} />
+        <IndividualCircle color={"blue"} blinkDuration={blinkDuration} solutionSequence={solutionSequence} roundBlinkCount={roundBlinkCount}/>
 
-        <IndividualCircle color={"green"} />
+        <IndividualCircle color={"green"} blinkDuration={blinkDuration} solutionSequence={solutionSequence} roundBlinkCount={roundBlinkCount}/>
 
-        <IndividualCircle color={"yellow"} />
+        <IndividualCircle color={"yellow"} blinkDuration={blinkDuration} solutionSequence={solutionSequence} roundBlinkCount={roundBlinkCount}/>
       </div>
       <button onClick={() => startGameSequence()}>Start Game</button>
       <button onClick={() => resetGame()}>Reset</button>
