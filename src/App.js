@@ -21,6 +21,13 @@ export default function App() {
       }
     }
 
+    function startGameSequence() {
+      if(currentRound === 1) {
+        generateSolutionSequence()
+        console.log(solutionSequence)
+      }
+    }
+
     return (
       <div>
         <h1 className="simon-heading">Simon</h1>
@@ -33,6 +40,8 @@ export default function App() {
 
         <IndividualCircle color={"yellow"} />
         </div>
+        <button onClick={() => startGameSequence()}>Start Game</button>
+        <button >Reset</button>
 
         <Score />
       </div>
