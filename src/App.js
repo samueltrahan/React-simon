@@ -16,9 +16,7 @@ export default function App() {
 
   function generateSolutionSequence() {
     for (let i = 0; i < 20; i++) {
-      setSolutionSequence({
-        solutionSequence: Math.floor(Math.random() * 4) + 1,
-      });
+    solutionSequence.push(Math.floor(Math.random() * 4) + 1)
     }
   }
 
