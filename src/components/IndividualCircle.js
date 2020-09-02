@@ -7,7 +7,7 @@ const IndividualCircle = ({ color, blinkDuration, solutionSequence, roundBlinkCo
 
   return (
     <>
-      <button className={`${color}-circle`}>{color}</button>
+      <button type="submit" className={`${color}-circle`}>{color}</button>
     </>
   );
 };

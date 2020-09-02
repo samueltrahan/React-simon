@@ -3,6 +3,8 @@ import "./App.css";
 import IndividualCircle from "./components/IndividualCircle";
 import Score from "./components/Score";
 
+
+
 export default function App() {
   const [solutionSequence, setSolutionSequence] = useState([]);
   const [solutionSequenceIndex, setSolutionSequenceIndex] = useState(0);
@@ -14,17 +16,17 @@ export default function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [isWinner, setIsWinner] = useState(false);
 
-  function generateSolutionSequence() {
-    for (let i = 0; i < 1; i++) {
-      solutionSequence.push(Math.floor(Math.random() * 4) + 1);
-    }
-  }
-
   function startGameSequence() {
     if (currentRound === 1) {
       generateSolutionSequence();
     }
     roundInterval = setInterval(playGameBlink, blinkGapDuration);
+  }
+
+  function generateSolutionSequence() {
+    for (let i = 0; i < 1; i++) {
+      solutionSequence.push(Math.floor(Math.random() * 4) + 1);
+    }
   }
 
   function playGameBlink() {
@@ -52,11 +54,11 @@ export default function App() {
     if (solutionSequence[roundBlinkCount] === 1) {
       handleButtonBlink(1);
     } else if (solutionSequence[roundBlinkCount] === 2) {
-      handleButtonBlink(2)
-    } else if(solutionSequence[roundBlinkCount] === 3) {
-      handleButtonBlink(3)
+      handleButtonBlink(2);
+    } else if (solutionSequence[roundBlinkCount] === 3) {
+      handleButtonBlink(3);
     } else {
-      handleButtonBlink(4)
+      handleButtonBlink(4);
     }
   }
 
